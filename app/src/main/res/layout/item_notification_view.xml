@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/dimen_8"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:layoutDirection="rtl"
+    android:padding="@dimen/margin_padding_tiny_4"
+    android:background="@drawable/button_white"
+    app:cardCornerRadius="@dimen/dimen_8"
+    app:cardElevation="@dimen/dimen_4">
+        <TextView
+            android:id="@+id/MyAccount_EditText_Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_white"
+            android:drawableStart="@drawable/mark"
+            android:drawableEnd="@drawable/cancel"
+            android:drawablePadding="@dimen/dimen_8"
+            android:fontFamily="@font/details_font"
+            android:hint="اشعار"
+            android:inputType="text"
+            android:paddingStart="@dimen/dimen_16"
+            android:paddingEnd="@dimen/dimen_8"
+            android:textAlignment="viewStart" />
+</android.support.v7.widget.CardView>

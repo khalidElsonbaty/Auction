@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:paddingLeft="@dimen/dimen_8"
+    android:paddingTop="@dimen/dimen_16"
+    android:paddingRight="@dimen/dimen_8">
+
+    <TextView
+        android:id="@+id/ServiceConditions_TextView_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textSize="@dimen/text_size_medium_20"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/ServiceConditions_TextView_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ServiceConditions_TextView_Title"
+        android:layout_marginLeft="@dimen/dimen_8"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:layout_marginRight="@dimen/dimen_8"
+        android:textSize="@dimen/text_size_small_15" />
+</RelativeLayout>

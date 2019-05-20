@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:layoutDirection="rtl"
+    tools:context=".ui.activity.DetailsActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/DetailsAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/MyAppBarLayoutTheme">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false">
+
+            <com.sembozdemir.viewpagerarrowindicator.library.ViewPagerArrowIndicator
+                android:id="@+id/viewPagerArrowIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layoutDirection="ltr">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/Details_ViewPager_images_Recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="fitXY"
+                    android:transitionName="img"
+                    app:layout_collapseMode="parallax" >
+                </android.support.v4.view.ViewPager>
+
+            </com.sembozdemir.viewpagerarrowindicator.library.ViewPagerArrowIndicator>
+
+            <RelativeLayout
+                android:id="@+id/headerContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:fitsSystemWindows="true"
+                android:orientation="vertical"
+                app:layout_collapseMode="pin">
+
+                <ImageView
+                    android:id="@+id/DetailsImageView_TopShadow"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/top_shadow" />
+
+                <ImageView
+                    android:id="@+id/DetailsImageView_BottomShadow"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_alignBottom="@id/DetailsImageView_TopShadow"
+                    android:layout_alignParentBottom="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bottom_shadow" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/DetailsToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layoutDirection="ltr"
+                android:contentInsetStart="0dp"
+                android:contentInsetLeft="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <LinearLayout
+                    android:id="@+id/DetailsTitle_Appbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/DetailsTextView_Title_Appbar"
+                        style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="تفاصيل اعلان"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/DetailsTextView_Subtitle_Appbar"
+                        style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="الاعلان"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/layout"
+        android:fitsSystemWindows="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_16"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_4">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/Details_CardView_Person_File"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_32"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="@dimen/cardview_default_elevation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:layoutDirection="rtl"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.8"
+                        android:gravity="center|top"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/DetailsCiv_product_Image"
+                            android:layout_width="@dimen/dimen_72"
+                            android:layout_height="@dimen/dimen_72"
+                            android:layout_gravity="center"
+                            android:src="@drawable/user"
+                            app:civ_border_color="@color/gold"
+                            app:civ_border_width="2dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/dimen_16"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dimen_4">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/DetailsTextView_Name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:drawableStart="@drawable/user"
+                                android:drawablePadding="@dimen/dimen_8"
+                                android:fontFamily="@font/details_font"
+                                android:text="اسم العرض"
+                                android:textColor="@color/gold"
+                                android:textSize="@dimen/text_size_title_12"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/DetailsTextView_place"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawableStart="@drawable/map"
+                                android:drawablePadding="@dimen/dimen_8"
+                                android:fontFamily="@font/details_font"
+                                android:text="منطقة العرض"
+                                android:textAlignment="textStart"
+
+                                android:textSize="@dimen/text_size_small_10"
+                                android:textStyle="italic" />
+
+                            <TextView
+                                android:id="@+id/DetailsTextView_Message"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawableStart="@drawable/support"
+                                android:drawablePadding="@dimen/dimen_8"
+                                android:fontFamily="@font/details_font"
+                                android:text="منطقة العرض"
+                                android:textAlignment="textStart"
+                                android:textSize="@dimen/text_size_small_10"
+                                android:textStyle="italic" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dimen_24"
+                                android:background="@drawable/button_gray"
+                                android:padding="@dimen/dimen_4"
+                                android:text="مشاهدة ملف شخصي"
+                                android:textColor="#C0C0BF" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/Details_CardView_Data_Details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_32"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="@dimen/cardview_default_elevation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:layoutDirection="rtl"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.1"
+                            android:fontFamily="@font/details_font"
+                            android:paddingStart="@dimen/dimen_8"
+                            android:text="رقم الاعلان : "
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/Details_TextView_Ads_Number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/details_font" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.1"
+                            android:fontFamily="@font/details_font"
+                            android:paddingStart="@dimen/dimen_8"
+                            android:text="تاريخ الاعلان : "
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/Details_TextView_Ads_Data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/details_font" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_2"
+                        android:layout_margin="@dimen/dimen_8"
+                        android:background="@color/view_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.1"
+                            android:fontFamily="@font/details_font"
+                            android:paddingStart="@dimen/dimen_8"
+                            android:text="القسم : "
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/Details_TextView_Ads_Cateory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/details_font" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.1"
+                            android:fontFamily="@font/details_font"
+                            android:paddingStart="@dimen/dimen_8"
+                            android:text="السعر : "
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/Details_TextView_Ads_Price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/details_font" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_2"
+                        android:layout_margin="@dimen/dimen_8"
+                        android:background="@color/view_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.1"
+                            android:fontFamily="@font/details_font"
+                            android:paddingStart="@dimen/dimen_8"
+                            android:text="البلد : "
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/Details_TextView_Ads_Country"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/details_font" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.1"
+                            android:fontFamily="@font/details_font"
+                            android:paddingStart="@dimen/dimen_8"
+                            android:text="المنطقة : "
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/Details_TextView_Ads_Region"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/details_font" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_2"
+                        android:layout_margin="@dimen/dimen_8"
+                        android:background="@color/view_color" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.1"
+                        android:fontFamily="@font/details_font"
+                        android:paddingStart="@dimen/dimen_8"
+                        android:text="تفاصيل الاعلان : "
+                        android:textSize="@dimen/text_size_small_15"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/Details_TextView_Ads_Details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="@dimen/dimen_16"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_custom_blur"
+                        android:fontFamily="@font/details_font" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="@dimen/dimen_16"
+                        android:layoutDirection="ltr"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/Details_TextView_Ads_Comment_Num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:drawableEnd="@drawable/comment"
+                            android:drawablePadding="@dimen/dimen_8"
+                            android:fontFamily="@font/details_font"
+                            android:text="8"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/Details_TextView_Ads_Fav_Num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="@dimen/dimen_8"
+                            android:layout_weight="1"
+                            android:drawableEnd="@drawable/likee"
+                            android:drawablePadding="@dimen/dimen_8"
+                            android:fontFamily="@font/details_font"
+                            android:text="15"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/gold"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="@dimen/dimen_8"
+                            android:fontFamily="@font/details_font"
+                            android:text="رقم التواصل :"
+                            android:textColor="@color/white_color"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/Details_TextView_contact"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="@dimen/dimen_8"
+                            android:fontFamily="@font/details_font"
+                            android:textColor="@color/white_color"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/Details_CardView_Comments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_32"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="@dimen/cardview_default_elevation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:layoutDirection="rtl"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/Details_RecyclerView_Comments"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToPadding="false" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layoutDirection="rtl"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/Details_Civ_owner_Image"
+                                android:layout_width="@dimen/dimen_72"
+                                android:layout_height="@dimen/dimen_72"
+                                android:layout_gravity="center"
+                                android:padding="@dimen/dimen_2"
+                                android:src="@drawable/user"
+                                app:civ_border_color="@color/gold"
+                                app:civ_border_width="2dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/dimen_16"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dimen_4">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.2"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/Details_TextView_UserName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/details_font"
+                                    android:text="اسم المستخدم"
+                                    android:textColor="@color/gold"
+                                    android:textSize="@dimen/text_size_small_15"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:paddingTop="@dimen/dimen_4"
+                                android:orientation="horizontal">
+
+                                <EditText
+                                    android:id="@+id/Details_EditText_Write_Comment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/button_off_white1"
+                                    android:fontFamily="@font/details_font"
+                                    android:text="اكتب تعليق"
+                                    android:paddingStart="@dimen/dimen_16"
+                                    android:textSize="@dimen/text_size_small_10"
+                                    android:textStyle="italic" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:paddingTop="@dimen/dimen_4"
+                                android:gravity="end"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/Details_Button_Send"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/button_yellow_2"
+                                    android:fontFamily="@font/details_font"
+                                    android:text="ارسال"
+                                    android:textColor="@color/white_color"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:gravity="center"
+            android:elevation="@dimen/dimen_4">
+
+                <TextView
+                    android:id="@+id/Details_TextView_Related_Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_4"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/text_size_medium_20"
+                    android:text="اعلانات مشابهة"
+                    android:background="@drawable/button_yellow_2" />
+            </LinearLayout>
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/Home_RelativeLayout_ViewPager_Container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/Details_ViewPager_Related_Recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginLeft="@dimen/viewpager_margin_fix"
+                    android:layout_marginRight="@dimen/viewpager_margin_fix"
+                    android:layout_marginVertical="@dimen/dimen_8"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_yellow_2"
+        android:fontFamily="@font/cairo"
+        android:padding="@dimen/dimen_8"
+        android:text="معلومات صاحب الاعلان"
+        android:textColor="@color/white_color"
+        app:layout_anchor="@+id/Details_CardView_Person_File"
+        app:layout_anchorGravity="center|top" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_yellow_2"
+        android:fontFamily="@font/cairo"
+        android:padding="@dimen/dimen_8"
+        android:text="معلومات صاحب الاعلان"
+        android:textColor="@color/white_color"
+        app:layout_anchor="@+id/Details_CardView_Data_Details"
+        app:layout_anchorGravity="center|top" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_yellow_2"
+        android:fontFamily="@font/cairo"
+        android:padding="@dimen/dimen_8"
+        android:text="التعليقات"
+        android:textColor="@color/white_color"
+        app:layout_anchor="@+id/Details_CardView_Comments"
+        app:layout_anchorGravity="center|top" />
+
+
+    <FrameLayout
+        android:id="@+id/Details_FrameLayout_behaviors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/DetailsImageView_TopShadow"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:adjustViewBounds="true"
+        android:clickable="false"
+        android:layoutDirection="ltr"
+        android:padding="5dp"
+        app:layout_anchor="@+id/DetailsAppBarLayout"
+        app:layout_anchorGravity="right|end|bottom">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/DetailsImageView_Like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_16"
+                android:layout_marginEnd="@dimen/dimen_8"
+                android:src="@drawable/like" />
+
+            <ImageView
+                android:id="@+id/DetailsImageView_Share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_4"
+                android:layout_marginEnd="@dimen/dimen_8"
+                android:src="@drawable/share" />
+
+            <ImageView
+                android:id="@+id/DetailsImageView_Report"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_4"
+                android:layout_marginEnd="@dimen/dimen_8"
+                android:src="@drawable/report" />
+        </LinearLayout>
+    </FrameLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

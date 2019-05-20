@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home"
+            android:title="الرئيسية" />
+        <item
+            android:id="@+id/nav_my_account"
+            android:icon="@drawable/menuprofile"
+            android:title="حسابي" />
+        <item
+            android:id="@+id/nav_category"
+            android:icon="@drawable/menulist"
+            android:title="أقسام" />
+        <item
+            android:id="@+id/nav_advertisement"
+            android:icon="@drawable/ads"
+            android:title="اعلانات" />
+        <item
+            android:id="@+id/nav_register_card"
+            android:icon="@drawable/menuwallet"
+            android:title="باقات الاشتراك" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/menuinfo"
+            android:title="عن التطبيق" />
+        <item
+            android:id="@+id/nav_rules"
+            android:icon="@drawable/menulock"
+            android:title="الشروط والاحكام" />
+        <item
+            android:id="@+id/nav_share_app"
+            android:icon="@drawable/menushare"
+            android:title="مشاركة البرنامج" />
+        <item
+            android:id="@+id/nav_contact_us"
+            android:icon="@drawable/menuphone"
+            android:title="اتصل بنا" />
+    </group>
+
+</menu>

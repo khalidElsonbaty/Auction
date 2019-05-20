@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "26554845508",
+    "firebase_url": "https://auction-f9d73.firebaseio.com",
+    "project_id": "auction-f9d73",
+    "storage_bucket": "auction-f9d73.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:26554845508:android:4eb72e184cf05ad1",
+        "android_client_info": {
+          "package_name": "com.sonbaty.auction"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "26554845508-mq2hac4u9ag0lh24k89jds8lgevjh5le.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sonbaty.auction",
+            "certificate_hash": "70e7fddaece32907a0716a02dbb35ddab0c6fa86"
+          }
+        },
+        {
+          "client_id": "26554845508-ho0jp9p3em303517dd3ek9vaqumcunao.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKS0X1M1x86f_5rJ3s1OCfiWlFarJ-kzc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "26554845508-ho0jp9p3em303517dd3ek9vaqumcunao.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

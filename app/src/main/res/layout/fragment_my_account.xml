@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout"
+    android:layoutDirection="rtl"
+    tools:context=".ui.fragment.navigationCycle.MyAccountFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_24"
+                android:layout_marginTop="@dimen/dimen_24"
+                android:layout_marginEnd="@dimen/dimen_24"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/MyAccount_Civ_product_Image"
+                    android:layout_width="@dimen/dimen_72"
+                    android:layout_height="@dimen/dimen_72"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:src="@drawable/profileuser"
+                    app:civ_border_color="#C7E5C2"
+                    app:civ_border_width="2dp" />
+
+                <EditText
+                    android:id="@+id/MyAccount_EditText_Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_32"
+                    android:background="@drawable/button_white"
+                    android:drawableStart="@drawable/profileuser"
+                    android:drawableEnd="@drawable/edit"
+                    android:drawablePadding="@dimen/dimen_8"
+                    android:fontFamily="@font/details_font"
+                    android:hint="الاسم"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/dimen_16"
+                    android:paddingEnd="@dimen/dimen_8"
+                    android:textAlignment="viewStart" />
+
+                <EditText
+                    android:id="@+id/MyAccount_EditText_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:background="@drawable/button_white"
+                    android:drawableStart="@drawable/profilphone"
+                    android:drawableEnd="@drawable/edit"
+                    android:drawablePadding="@dimen/dimen_8"
+                    android:fontFamily="@font/details_font"
+                    android:hint="رقم الهاتف"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="@dimen/dimen_16"
+                    android:paddingEnd="@dimen/dimen_8"
+                    android:textAlignment="viewStart" />
+
+                <EditText
+                    android:id="@+id/MyAccount_EditText_Email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:background="@drawable/button_white"
+                    android:drawableStart="@drawable/profilremail"
+                    android:drawableEnd="@drawable/edit"
+                    android:drawablePadding="@dimen/dimen_8"
+                    android:fontFamily="@font/details_font"
+                    android:hint="البريد الاكتروني"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="@dimen/dimen_16"
+                    android:paddingEnd="@dimen/dimen_8"
+                    android:textAlignment="viewStart" />
+
+
+                <Button
+                    android:id="@+id/MyAccount_Button_RePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_80"
+                    android:background="@drawable/button_white"
+                    android:fontFamily="@font/details_font"
+                    android:text="تغير كلمة المرور"
+                    android:textStyle="bold" />
+
+
+                <Button
+                    android:id="@+id/MyAccount_Button_Register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:layout_marginBottom="@dimen/dimen_24"
+                    android:background="@drawable/button_yellow_2"
+                    android:fontFamily="@font/details_font"
+                    android:text="حفظ"
+                    android:textColor="@color/white_color"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

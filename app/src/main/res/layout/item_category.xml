@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:layout_marginTop="@dimen/dimen_8"
+    android:layout_marginStart="@dimen/dimen_8"
+    android:layout_marginEnd="@dimen/dimen_8"
+    android:layout_marginBottom="@dimen/dimen_40"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/CategoryThumb"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_circle" />
+
+        <TextView
+            android:id="@+id/CategoryName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="" />
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="rtl"
+    android:layout_margin="@dimen/dimen_8"
+    android:padding="@dimen/margin_padding_tiny_4"
+    android:orientation="horizontal">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/Conversation_Civ_product_Image"
+        android:layout_width="@dimen/dimen_72"
+        android:layout_height="@dimen/dimen_72"
+        android:src="@drawable/user"
+        app:civ_border_color="@color/gold"
+        app:civ_border_width="2dp" />
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginTop="@dimen/dimen_4"
+        android:layout_marginStart="@dimen/dimen_8"
+        android:layout_marginEnd="@dimen/dimen_4"
+        android:foreground="?attr/selectableItemBackground"
+        android:layoutDirection="rtl"
+        android:background="@drawable/button_trans_clear"
+        android:padding="@dimen/dimen_16"
+        app:cardCornerRadius="@dimen/dimen_40"
+        app:cardElevation="@dimen/dimen_4">
+        <LinearLayout
+            android:layout_marginStart="@dimen/dimen_24"
+            android:layout_marginEnd="@dimen/dimen_8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Conversation_TextView_Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/details_font"
+                    android:text="اسم العرض"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/text_size_title_12"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="@dimen/dimen_8"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Conversation_TextView_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/details_font"
+                    android:layout_weight="1"
+                    android:textAlignment="textStart"
+                    android:textDirection="rtl"
+                    android:text="منطقة العرض"
+                    android:textSize="@dimen/text_size_small_10"
+                    android:textStyle="italic" />
+                <ImageView
+                    android:id="@+id/Conversation_ImageView_menu"
+                    android:layout_weight="1"
+                    android:background="@color/gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/menu"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layoutDirection="ltr"
+                android:layout_marginStart="@dimen/dimen_40"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Conversation_TextView_Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/details_font"
+                    android:text="منذ 3 ساعات"
+                    android:textAlignment="textEnd"
+                    android:textSize="@dimen/text_size_time" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
